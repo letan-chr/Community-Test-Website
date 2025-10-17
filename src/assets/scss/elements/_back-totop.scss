@@ -1,0 +1,139 @@
+
+
+// progress bar
+.progress-wrap {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    height: 46px;
+    width: 46px;
+    cursor: pointer;
+    display: block;
+    border-radius: 50px;
+    z-index: 10000;
+    opacity: 1;
+    visibility: hidden;
+    transform: translateY(15px);
+    transition: all 200ms linear;
+}
+
+.progress-wrap.active-progress {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.progress-wrap::after {
+    position: absolute;
+    font-family: 'unicons';
+    content: '\e84b';
+    text-align: center;
+    line-height: 46px;
+    font-size: 24px;
+    color: $color-primary;
+    left: 0;
+    top: 0;
+    height: 46px;
+    width: 46px;
+    cursor: pointer;
+    display: block;
+    z-index: 1;
+    transition: all 200ms linear;
+    border: 2px solid $color-primary;
+    border-radius: 5px;
+    box-shadow: none;
+}
+
+.progress-wrap:hover::after {
+    opacity: 1;
+    content: '\e84b';
+    border: 2px solid $color-primary;
+}
+
+.progress-wrap::before {
+    position: absolute;
+    font-family: 'unicons';
+    content: '\e84b';
+    text-align: center;
+    line-height: 46px;
+    font-size: 24px;
+    opacity: 0;
+    background: $color-primary;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    left: 0;
+    top: 0;
+    height: 46px;
+    width: 46px;
+    cursor: pointer;
+    display: block;
+    z-index: 2;
+    transition: all 200ms linear;
+}
+
+.progress-wrap:hover::before {
+    opacity: 0;
+}
+
+.progress-wrap svg path { 
+    fill: none; 
+}
+
+.progress-wrap svg { 
+    color:$color-primary;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.progress-wrap svg.progress-circle path {
+    stroke:$color-primary;
+    stroke-width: 34px;
+    box-sizing: border-box;
+    transition: all 200ms linear;
+}
+
+// Theme-specific overrides
+.home-blue {
+    .progress-wrap svg.progress-circle path {
+        stroke:$color-primary-2;
+    }
+    .progress-wrap::after {
+        border-color:$color-primary-2;
+        box-shadow: 0px 3px 20px 6px rgba(7, 66, 229, 0.32);
+        color:$color-primary-2;
+    }
+}
+
+.home-blue2 {
+    .progress-wrap svg.progress-circle path {
+        stroke:$color-primary-2;
+    }
+    .progress-wrap::after {
+        border-color:$color-primary-2;
+        box-shadow: 0px 3px 20px 6px rgba(7, 66, 229, 0.32);
+        color:$color-primary-2;
+    }
+}
+
+.home-violet {
+    .progress-wrap svg.progress-circle path {
+        stroke: $color-primary-4;
+    }
+    .progress-wrap::after {
+        border-color:$color-primary-4;
+        box-shadow: 0px 3px 20px 6px rgba(7, 66, 229, 0.32);
+        color:$color-primary-4;
+    }
+}
+
+.index-six {
+    .progress-wrap svg.progress-circle path {
+        stroke:$color-primary-6;
+    }
+    .progress-wrap::after {
+        border-color:$color-primary-6;
+        box-shadow: 0px 3px 20px 6px rgba(246, 74, 0, 0.34);
+        color:$color-primary-6;
+    }
+}

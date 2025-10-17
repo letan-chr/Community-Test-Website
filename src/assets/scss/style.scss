@@ -1,0 +1,62 @@
+/*---------------------------
+  Main SCSS imports
+---------------------------*/
+
+/* Default */
+@use 'default/variables' as vars;
+@use 'default/typography';
+@use 'default/spacing';
+@use 'default/reset';
+@use 'default/forms';
+@use 'default/mixins';
+@use 'default/shortcode';
+@use 'default/common';
+@use 'default/animations';
+@use 'default/text-animation';
+@use 'default/sal';
+
+/* Header styles */
+@use 'header/header';
+@use 'header/nav';
+@use 'header/breadcrumb';
+@use 'header/mobile-menu';
+
+/* Elements */
+@use 'elements/button';
+@use 'elements/swiper';
+@use 'elements/banner';
+@use 'elements/about';
+@use 'elements/service';
+@use 'elements/cta';
+@use 'elements/business-goal';
+@use 'elements/counterup';
+@use 'elements/gallery';
+@use 'elements/project';
+@use 'elements/trusted-client';
+@use 'elements/team';
+@use 'elements/feature';
+@use 'elements/testimonial';
+@use 'elements/pricing';
+@use 'elements/blog';
+@use 'elements/appoinment';
+@use 'elements/faq';
+@use 'elements/contact';
+@use 'elements/map-area';
+@use 'elements/team-details';
+@use 'elements/working-process';
+@use 'elements/back-totop';
+@use 'elements/preloader';
+@use 'elements/footer';
+
+/* Example of using variables in SCSS */
+body {
+    scroll-behavior: auto;
+    background: vars.$color-white;
+}
+
+/* Example media query usage */
+.header {
+    @media #{vars.$smlg-device} {
+        background-color: vars.$color-primary;
+    }
+}

@@ -1,0 +1,41 @@
+
+@use "sass:list";
+
+@mixin clearfix() {
+    &::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+}
+
+@mixin config-bg-colors($prefix, $bg-color-...) {
+    @each $i in $bg-color- {
+        $name: if(list.length($i) >= 1, list.nth($i, 1), $i);
+        $color: if(list.length($i) >= 2, list.nth($i, 2), null);
+
+        @if $color != null {
+            .#{$prefix}#{$name} {
+                background: $color;
+            }
+        }
+    }
+}
+
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        @content;
+    }
+
+    &:-moz-placeholder {
+        @content;
+    }
+
+    &::-moz-placeholder {
+        @content;
+    }
+
+    &:-ms-input-placeholder {
+        @content;
+    }
+}
