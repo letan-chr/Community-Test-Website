@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import MainLayout from '../components/layouts/Mainlayout';
-import HeroSection from '../components/sections/HerSection';
+// import HeroSection from '../components/sections/HerSection';
 // import Home from '../components/home/Home';
 // import About from '../components/page/about-us/AboutPage';
 // import Services from '../components/page/service/Service';
@@ -17,7 +17,7 @@ const AppRoutes = () => {
   return (
     <Router>
     <MainLayout>
-     <HeroSection />
+     {/* <HeroSection /> */}
         {/* <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
